@@ -16,6 +16,7 @@ RUN pip install --no-cache-dir \
         GitPython==3.1.40 \
         PyGithub==2.1.1 \
         python-dateutil==2.8.2 \
+        python-frontmatter==1.0.1 `# used in https://github.com/giantswarm/rfc/tree/main/.github for RFC Markdown + YAML header parsing` \
     && pip install \
         --global-option='--with-libyaml' PyYAML==6.0.1
 
