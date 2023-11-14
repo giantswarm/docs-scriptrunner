@@ -10,7 +10,7 @@ RUN apk --no-cache add \
 
 ENV PYTHONUNBUFFERED=yes
 
-RUN pip install \
+RUN pip install --no-cache-dir \
         click==8.1.7 \
         colored==2.2.3 \
         GitPython==3.1.40 \
