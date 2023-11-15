@@ -1,0 +1,21 @@
+version: 2.1
+
+orbs:
+  architect: giantswarm/architect@4.34.1
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - architect/push-to-docker:
+          context: "architect"
+          name: "build giantswarm/docs-scriptrunner"
+          image: "quay.io/giantswarm/docs-scriptrunner"
+          username_envar: "QUAY_USERNAME"
+          password_envar: "QUAY_PASSWORD"
+          dockerfile: "Dockerfile"
+          tag-latest-branch: "main"
+          filters:
+            # Needed to trigger job also on git tag.
+            tags:
+              only: /^v.*/
