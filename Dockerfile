@@ -15,6 +15,9 @@ RUN pip install --no-cache-dir \
         colored==2.2.3 \
         GitPython==3.1.40 \
         PyGithub==2.1.1 \
+        requests==2.26.0 \
+        markdown==3.3.6 \
+        html2text==2020.1.16 \
         python-dateutil==2.8.2 \
         python-frontmatter==1.0.1 `# used in https://github.com/giantswarm/rfc/tree/main/.github for RFC Markdown + YAML header parsing` \
     && pip install \
