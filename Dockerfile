@@ -1,4 +1,4 @@
-FROM quay.io/giantswarm/python:3.12.0-alpine3.18
+FROM gsoci.azurecr.io/giantswarm/python:3.12.0-alpine3.18
 
 RUN apk --no-cache add \
     build-base \
